@@ -45,6 +45,13 @@ $(function (){
     $(".fix_i img").attr('src', 'image/brand_amazing.jpg')
   })
 
+  $(".category_list>li", this).on({
+    mouseover:function(){
+        $('.category_sub', this).stop().slideDown()
+    },
+    mouseout:function(){
+        $(".category_sub", this).stop().slideUp()
 
-    
+    }
+});
 })
