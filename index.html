@@ -5,15 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maeil</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/771fe402f4.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                loop: true,
+                breakpoints: {
+
+                    400: {
+                        slidesPerView: 1,
+                    },
+
+                    575: {
+                        slidesPerView: 1,
+                    },
+
+                    768: {
+                        slidesPerView: 2,  //브라우저가 768보다 클 때
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,  //브라우저가 1024보다 클 때
+                        spaceBetween: 50,
+                    },
+                    1400: {
+                        slidesPerView: 4,  //브라우저가 1024보다 클 때
+                        spaceBetween: 50,
+                    }
+                },
+            });
+
+
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true
+            });
+
+        });
+    </script>
+
 </head>
 
 <body>
@@ -34,13 +86,13 @@
         <div class="main_v">
             <div class="header_bottom">
                 <ul>
-                    <li><a href="#">회사소개</a></li>
+                    <li><a href="index.html">회사소개</a></li>
                     <li><a href="#">브랜드</a></li>
                     <li class="logo">
-                        <h1><a href="#"><img src="image/logo.png" alt="logo"></a></h1>
+                        <h1><a href="index.html"><img src="image/logo.png" alt="logo"></a></h1>
                     </li>
-                    <li><a href="#">상생·윤리경영</a></li>
-                    <li><a href="#">자료실</a></li>
+                    <li><a href="sub_economy.html">상생·윤리경영</a></li>
+                    <li><a href="sub_global.html">자료실</a></li>
                     <li class="ham"><a href="#">
                             <img src="image/ham.png" alt="ham">
                         </a></li>
@@ -48,7 +100,7 @@
             </div>
             <div class="video">
                 <div class="main_video">
-                    <video src="video/mov_index.mp4" autoplay muted loop></video>
+                    <video src="video/Sequence 01.mp4" autoplay muted loop></video>
                 </div>
                 <div class="main_text">
                     <h2>
@@ -75,13 +127,17 @@
 
 
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper mySwiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="mind_img">
-                            <img src="image/mind_winwin.jpg" alt="winwin">
+                            <picture>
+                                <source srcset="image/mind_winwin.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_winwin_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
                         </div>
 
                         <div class="mind_contents">
@@ -101,7 +157,11 @@
 
                     <div class="swiper-slide">
                         <div class="mind_img">
-                            <img src="image/mind_poioneering.jpg" alt="poioneering">
+                            <picture>
+                                <source srcset="image/mind_poioneering.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_poioneering_big.jpg" media="(max-width:767px)">
+                                <img src="./" alt="s1">
+                            </picture>
                         </div>
 
                         <div class="mind_contents">
@@ -113,8 +173,7 @@
                             <div class="mind_contents_text">
                                 <p>
                                     멈춤 없이 더 나은 것과 새로운 것을 추구하는 매일은
-                                    늘 창의적인 태도를 가지기 위해 노력하며 늘 창의적인
-                                    생각을 바탕으로 접근하기 위해 노력합니다.
+                                    늘 창의적인 태도를 바탕으로 문제들에 접근하기 위해 노력합니다.
                                 </p>
                             </div>
                         </div>
@@ -122,7 +181,11 @@
 
                     <div class="swiper-slide">
                         <div class="mind_img">
-                            <img src="image/mind_openmind.jpg" alt="openmind">
+                            <picture>
+                                <source srcset="image/mind_openmind.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_openmind_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
                         </div>
 
                         <div class="mind_contents">
@@ -142,7 +205,107 @@
 
                     <div class="swiper-slide">
                         <div class="mind_img">
-                            <img src="image/mind_passionate.jpg" alt="passionate">
+                            <picture>
+                                <source srcset="image/mind_passionate.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_passionate_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
+                        </div>
+
+                        <div class="mind_contents">
+                            <div class="mind_contents_title">
+                                <h3>열정 Passionate</h3>
+                                <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                            </div>
+
+                            <div class="mind_contents_text">
+                                <p>
+                                    뜨거운 마음으로 일을 시작하고 끈기 있게 노력하는 매
+                                    일은 도전정신을 통해 업계리더로서 자리매김하고 있
+                                    습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mind_img">
+                            <picture>
+                                <source srcset="image/mind_winwin.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_winwin_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
+                        </div>
+
+                        <div class="mind_contents">
+                            <div class="mind_contents_title">
+                                <h3>상생 Win-win</h3>
+                                <!-- 24 -->
+                                <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                            </div>
+
+                            <div class="mind_contents_text">
+                                <p>
+                                    사회는 홀로 나아가는 것이 아님을 알기에 매일과 함께 일하는 낙농가, 파트너사 모두의 발전을 위해 일하는 매일이 되겠습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="mind_img">
+                            <picture>
+                                <source srcset="image/mind_poioneering.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_poioneering_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
+                        </div>
+
+                        <div class="mind_contents">
+                            <div class="mind_contents_title">
+                                <h3>창의 Poioneering</h3>
+                                <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                            </div>
+
+                            <div class="mind_contents_text">
+                                <p>
+                                    멈춤 없이 더 나은 것과 새로운 것을 추구하는 매일은
+                                    늘 창의적인 태도를 바탕으로 문제들에 접근하기 위해 노력합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="mind_img">
+                            <picture>
+                                <source srcset="image/mind_openmind.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_openmind_big.jpg" media="(max-width : 767px)">
+                                <img src="./" alt="s1">
+                            </picture>
+                        </div>
+
+                        <div class="mind_contents">
+                            <div class="mind_contents_title">
+                                <h3>소통 Open-Minded</h3>
+                                <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                            </div>
+
+                            <div class="mind_contents_text">
+                                <p>
+                                    서로 존중하고 열린 마음으로 활발하게 대화하고 토론
+                                    을 진행해 소외되는 이가 생기지 않는 매일이 되겠습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="mind_img">
+                            <picture>
+                                <source srcset="image/mind_passionate.jpg" media="(min-width:768px)">
+                                <source srcset="image/mind_passionate_big.jpg" media="(max-width:767px)">
+                                <img src="./" alt="s1">
+                            </picture>
                         </div>
 
                         <div class="mind_contents">
@@ -193,7 +356,11 @@
                 </div>
 
                 <div class="nanum_cow">
-                    <img src="image/core_cow.jpg" alt="cow">
+
+                    <img srcset="image/core_cow_300.jpg 400w,
+                    image/core_cow.jpg 1000w" 
+                    sizes="(max-width: 500px) 444px (max-width: 800px) 777px, 1222px" src="image/core_cow.jpg" alt="banner">
+
                 </div>
 
                 <div class="child_baby">
@@ -233,39 +400,15 @@
                     매일의 대표상품을 소개합니다.
                 </h2>
             </div>
-            <div class="row">
-                <div class="column small-11 small-centered">
-                    <div class="slider slider-single">
-                        <div class="maeilMilk">
-                            <img src="image/brand_maeil.jpg" alt="maeil">
-                        </div>
-
-
-                        <div class="absolute">
-                            <img src="image/brand_bio.jpg" alt="bio">
-                        </div>
-
-
-
-                        <div class="absolute">
-                            <img src="image/brand_absolute.jpg" alt="absolute">
-                        </div>
-
-
-
-                        <div class="absolute">
-                            <img src="image/brand_coffee.jpg" alt="coffee">
-                        </div>
-
-
-                        <div class="absolute">
-                            <img src="image/brand_amazing.jpg" alt="amazing">
-                        </div>
+            <div class="brand_slide">
+                <div class="fix">
+                    <div class="fix_i">
+                        <img src="image/brand_maeil.jpg" alt="maeil">
                     </div>
-
                 </div>
-                <div class="slider slider-nav">
-                    <div class="content">
+
+                <div class="scroll">
+                    <div class="content c1">
                         <div class="brand_textbox_title">
                             <h2>매일우유</h2>
                         </div>
@@ -278,7 +421,7 @@
                         </div>
                     </div>
 
-                    <div class="content">
+                    <div class="content c2">
                         <div class="brand_textbox_title">
                             <h2>매일 바이오</h2>
                         </div>
@@ -291,7 +434,7 @@
                         </div>
                     </div>
 
-                    <div class="content">
+                    <div class="content c3">
                         <div class="brand_textbox_title">
                             <h2>앱솔루트</h2>
                         </div>
@@ -305,7 +448,7 @@
                         </div>
                     </div>
 
-                    <div class="content">
+                    <div class="content c4">
                         <div class="brand_textbox_title">
                             <h2>바리스타룰스</h2>
                         </div>
@@ -318,7 +461,7 @@
                         </div>
                     </div>
 
-                    <div class="content">
+                    <div class="content c5">
                         <div class="brand_textbox_title">
                             <h2>어메이징 오트</h2>
                         </div>
@@ -434,7 +577,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <footer>
         <div class="f_contents">
@@ -519,9 +661,39 @@
 
 
     <div class="top">
-        <button href="#">
+        <button>
             <img src="image/top.svg" alt="topb">
         </button>
+    </div>
+
+    <div class="submenu">
+        <div class="sub_title">
+            <a href="#">
+                <img src="image/logo_white.png" alt="sublogo">
+            </a>
+
+            <div class="close">
+                <i class="fa-solid fa-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        <ul class="sub_m">
+            <li><a href="index.html">
+                    <h2>회사 소개</h2><br>
+                    <!-- <p>매일, 아이와 행복한 세상</p> -->
+                </a></li>
+
+            <li><a href="sub_brand.html">
+                    <h2>브랜드</h2>
+                </a></li>
+
+            <li><a href="sub_economy.html">
+                    <h2>상생·윤리경영</h2>
+                </a></li>
+
+            <li><a href="sub_global.html">
+                <h2>자료실</h2>
+            </a></li>
+        </ul>
     </div>
 </body>
 
