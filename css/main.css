@@ -1237,6 +1237,10 @@ footer .information .familysite select {
         font-size: 1.5rem;
     }
 
+    .top {
+        right: 16px;
+    }
+
     .top button img {
         width: 50px;
     }
@@ -1251,7 +1255,7 @@ footer .information .familysite select {
     }
 
     .main .header_bottom ul .ham img {
-        height: 35px;
+        height: 30px;
     }
 
     .main .video .main_text h2 {
@@ -1377,6 +1381,22 @@ footer .information .familysite select {
 
     .product .product_contents_text p {
         font-size: 0.8em;
+    }
+
+    .product .product_t .icecream {
+        margin: auto;
+    }
+
+    .product .product_t .cake {
+        margin: auto;
+    }
+
+    .product .product_b .amazing{
+        margin: auto;
+    }
+
+    .product .product_b .yogurt {
+        margin: auto;
     }
 
     .global .global_title {
