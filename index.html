@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/771fe402f4.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -15,8 +16,10 @@
     <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/app.js"></script>
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
             const swiper = new Swiper(".mySwiper", {
                 slidesPerView: 4,
@@ -332,7 +335,7 @@
             <h1 class="core_title">Maeil's Core Value</h1>
             <!-- 56 -->
 
-            <div class="core_contents_nanum">
+            <div class="core_contents_nanum" data-aos="zoom-in">
                 <div class="nanum">
                     <div class="nanum_textbox">
                         <div class="nanum_title">
@@ -355,7 +358,7 @@
                     </div>
                 </div>
 
-                <div class="nanum_cow">
+                <div class="nanum_cow" data-aos="flip-right">
 
                     <img srcset="image/core_cow_300.jpg 400w,
                     image/core_cow.jpg 1000w" 
@@ -363,11 +366,11 @@
 
                 </div>
 
-                <div class="child_baby">
+                <div class="child_baby" data-aos="flip-right">
                     <img src="image/core_baby.jpg" alt="baby">
                 </div>
 
-                <div class="child_pain">
+                <div class="child_pain" data-aos="flip-right">
                     <img src="image/core_milk.jpg" alt="milk">
 
                     <div class="child_pain_textbox">
@@ -491,7 +494,8 @@
         </div>
 
         <div class="product_contents">
-            <div class="product_t">
+            <div class="product_t" data-aos="fade-up"
+            data-aos-duration="3000">
                 <div class="product_contents_box icecream">
                     <div class="product_contents_img">
                         <img src="image/new_icecream.jpg" alt="icecream">
@@ -521,7 +525,9 @@
                 </div>
             </div>
 
-            <div class="product_b">
+            <div class="product_b" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
                 <div class="product_contents_box amazing">
                     <div class="product_contents_img">
                         <img src="image/new_amazing.jpg" alt="amaxing">
@@ -557,7 +563,8 @@
 
     <div class="global">
         <div class="global_title">
-            <h2 class="global_t">
+            <h2 class="global_t" data-aos="fade-up"
+            data-aos-anchor-placement="center-center">
                 매일유업은 전 세계 11개 국가에 수출 중이며<br>
                 2015년 12월 기준, 누계 수출액 5천만 불을 달성한<br>
                 글로벌 종합식품 기업으로 성장하고 있습니다.
@@ -695,6 +702,10 @@
             </a></li>
         </ul>
     </div>
+
+    <script>
+                 AOS.init({duration: 1200,})
+    </script>
 </body>
 
 </html>
