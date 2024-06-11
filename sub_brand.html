@@ -42,11 +42,12 @@
             </ul>
         </div>
         <div class="banner">
-            <picture>
+            <!-- <picture>
                 <source srcset="image/brand_banner.jpg" media="(min-width:1280px)">
                 <source srcset="image/brand_banner_1280.jpg" media="(max-width:1279px)">
                 <img src="./" alt="s1">
-            </picture>
+            </picture> -->
+            <img src="image/brand_banner_4000.jpg" alt="banner">
         </div>
     </div>
 
@@ -61,43 +62,15 @@
                     <h3>분류</h3>
                 </div>
 
-                <nav>
-                    <ul class="category_list">
-                        <li><a href=”#”> 유제품 </a>
-                            <ul class="category_sub">
-                                <li><a href="#">우유</a></li>
-                                <li><a href="#">발효유</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href=”#”> 식물성유제품 </a>
-                            <ul class="category_sub">
-                                <li> <a href=”#”>곡물</a> </li>
-
-                            </ul>
-                        </li>
-
-                        <li><a href=”#”> 주스 </a>
-                        </li>
-
-                        <li><a href=”#”> 커피 · 티 </a>
-                            <ul class="category_sub">
-                                <li><a href="#">커피</a></li>
-                                <li><a href="#">티</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href=”#”> 먹거리 </a>
-                            <ul class="category_sub">
-                                <li><a href="#">유아식</a></li>
-                                <li><a href="#">건강식</a></li>
-                                <li><a href="#">간편식</a></li>
-                                <li><a href="#">아이간식</a></li>
-                                <li><a href="#">디저트</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="slider">
+                    <div class="slider-inner">
+                        <div class="slider-item"><p>유제품</p></div>
+                        <div class="slider-item"><p>식물성 유제품</p></div>
+                        <div class="slider-item"><p>주스</p></div>
+                        <div class="slider-item"><p>커피·티</p></div>
+                        <div class="slider-item"><p>먹거리</p></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -379,7 +352,51 @@
                 </a></li>
         </ul>
     </div>
+    <script>
+        let slider = document.querySelector(".slider")
+        let innerSlider = document.querySelector(".slider-inner")
+        let pressed = false
+        let startx
+        let x
 
+        slider.addEventListener("mousedown", e => {
+            pressed = true
+            startx = e.offsetX - innerSlider.offsetLeft
+            slider.style.cursor = "grabbing"
+        })
+
+        slider.addEventListener("mouseenter", () => {
+            slider.style.cursor = "grab"
+        })
+
+        slider.addEventListener("mouseup", () => {
+            slider.style.cursor = "grab"
+        })
+
+        window.addEventListener("mouseup", () => {
+            pressed = false
+        })
+
+        slider.addEventListener("mousemove", e => {
+            if (!pressed) return
+            e.preventDefault()
+            x = e.offsetX
+
+            innerSlider.style.left = `${x - startx}px`
+            checkboundary()
+        })
+
+        function checkboundary() {
+            let outer = slider.getBoundingClientRect()
+            let inner = innerSlider.getBoundingClientRect()
+
+            if (parseInt(innerSlider.style.left) > 0) {
+                innerSlider.style.left = "0px"
+            } else if (inner.right < outer.right) {
+                innerSlider.style.left = `-${inner.width - outer.width}px`
+            }
+        }
+    </script>
 
 </body>
 
