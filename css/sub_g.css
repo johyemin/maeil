@@ -558,7 +558,11 @@ footer .information .familysite select{
         width: 200px;
     }
 
-    .top button img{
+    .top {
+        right: 16px;
+    }
+
+    .top button img {
         width: 50px;
     }
 }

@@ -749,8 +749,12 @@ footer .information .familysite select{
     .main .rule{
         margin-bottom: 200px;
     }
+    
+    .top {
+        right: 16px;
+    }
 
-    .top button img{
+    .top button img {
         width: 50px;
     }
 }

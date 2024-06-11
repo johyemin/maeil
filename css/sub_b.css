@@ -504,6 +504,10 @@ footer .information .familysite select {
         width: calc(100% - 20px);
     }
 
+    .top {
+        right: 16px;
+    }
+
     .top button img {
         width: 50px;
     }
