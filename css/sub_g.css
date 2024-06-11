@@ -80,7 +80,7 @@ header .header_top ul li:first-child{
     height: 700px;
     position: relative;
     top: 0;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
 }
 .main_b .banner{
     width: 100%;
@@ -88,6 +88,12 @@ header .header_top ul li:first-child{
     position: absolute;
     top: 0;
     overflow: hidden;
+}
+
+.main_b .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main_b .banner{
@@ -152,7 +158,8 @@ header .header_top ul li:first-child{
 }
 
 .main .main_t{
-    padding-left: calc(100% - 1600px);
+    max-width: 1200px;
+    margin: 100px;
     margin-bottom: 160px;
 }
 
@@ -477,6 +484,8 @@ footer .information .familysite select{
     /* 태블릿 */
 
     .main .into_W .into_top{
+        width: 100%;
+        padding: 0 20px;
         margin-bottom: 250px;
     }
 
@@ -485,6 +494,8 @@ footer .information .familysite select{
     }
 
     .main .into_W .into_bottom {
+        width: 100%;
+        padding: 0 20px;
         margin-bottom: 250px;
     }
 
@@ -499,9 +510,14 @@ footer .information .familysite select{
         font-size: 1.2rem;
     }
     
+    .main .with_W{
+        width: 100%;
+        padding: 0 20px;
+    }
     
     .main .with_W .with_contents h3{
         font-size: 1.2rem;
+        line-height: 150%;
     }
 
     .main .with_W .with_mark {
@@ -534,6 +550,10 @@ footer .information .familysite select{
 @media screen and (max-width : 767px) {
     /* 작은 태블릿 */
 
+    .main .main_t{
+        text-align: center;
+    }
+
     .main .into_W .into_bottom .into_milk img{
         width: 200px;
     }
@@ -545,15 +565,15 @@ footer .information .familysite select{
 
 @media screen and (max-width : 630px) {
 
-
-
-    .main_b .header_bottom ul .logo img{
+    
+    .main_b .header_bottom ul .logo img {
         width: 90px;
     }
 
-    .main_b .header_bottom ul .ham img{
-        height: 35px;
+    .main_b .header_bottom ul .ham img {
+        height: 30px;
     }
+
 
     
     .main .into_W .into_bottom .into_milk img{

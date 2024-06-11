@@ -77,15 +77,24 @@ header .header_top ul li:first-child {
 }
 
 .main_b {
+    width: 100%;
+    height: 700px;
     position: relative;
     top: 0;
+    margin-bottom: 250px;
 }
 
 .main_b .banner {
     width: 100%;
-    /* height: 700px; */
+    height: 100%;
     position: relative;
     top: -95px;
+}
+
+.main_b .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main_b .header_bottom {
@@ -143,93 +152,48 @@ header .header_top ul li:first-child {
 
 
 
-.main .product_btn .btn_category nav ul {
+.slider {
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
     position: relative;
-    margin: 0;
-    padding: 0;
 }
 
-.main .product_btn .btn_category nav ul li{
-    position: relative;
-    float: left;
-    margin: 28px;
+.slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    pointer-events: none;
+    align-items: center;
+    gap: 28px;
 }
 
-.main .product_btn .btn_category nav ul li a{
-    margin-bottom: 14px;
-}
-
-.main .product_btn .btn_category nav ul li:not(:first-child) {
-    border-left: none;
-}
-
-
-.main .product_btn .btn_category nav ul li a {
+.slider-item {
     text-align: center;
-    width: 130px;
-    height: fit-content;
-    display: inline-block;
-    padding: 1em ;
+    border-radius: 30px;
+    margin-right: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--maincolor--);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider-item p{
     color: #fff;
-    background-color: #00458C;
-    line-height: 1;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    border-radius: 20px;
-    font-family: var(--fontBold--);
-}
-
-.main .product_btn .btn_category nav ul ul {
-    position: absolute;
-    top: 100%;
-    left: -2px;
-}
-
-.main .product_btn .btn_category nav ul ul li {
-    float: none;
-    margin: 0;
-}
-
-
-.main .product_btn .btn_category nav ul ul ul {
-    position: absolute;
-    top: -2px;
-    left: 100%;
+    font-family: var(--fontBold--);    
 }
 
 
 .main .product_btn .category_list .category_sub{
     display: none;
-}
-
-
-.main .category_list {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.main .category_list .category_main {
-    display: flex;
-    justify-content: space-between;
-}
-
-.main .category_list .category_main li {
-    margin: 0 30px;
-}
-
-
-.main .category_list .category_main .category_sub {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.main .category_list .category_main .category_sub ul li {
-    margin-bottom: 28px;
 }
 
 .main .product_list {
@@ -272,10 +236,6 @@ header .header_top ul li:first-child {
 .main .product_list .product .p_T i {
     color: var(--maincolor--);
 }
-
-
-
-
 
 footer {
     position: relative;
@@ -475,6 +435,19 @@ footer .information .familysite select {
         display: flex;
         flex-direction: column;
     }
+
+    .slider{
+        width: 80%;
+    }
+    
+    .slider-inner{
+        gap: 14px;
+    }
+}
+
+@media screen and (max-width: 1000px ) {
+
+    
 }
 
 @media screen and (max-width : 991px) {
@@ -495,6 +468,10 @@ footer .information .familysite select {
     /* .main .product_btn .btn_category nav .category_list::-webkit-scrollbar {
         width:0px;
       } */
+
+      .slider-item p{
+        font-size: 0.9rem;
+      }
 
     footer {
         padding: 0 24px;
@@ -522,7 +499,10 @@ footer .information .familysite select {
 @media screen and (max-width : 767px) {
     /* 작은 태블릿 */
 
-
+    
+    .slider{
+        width: calc(100% - 20px);
+    }
 
     .top button img {
         width: 50px;
@@ -531,7 +511,19 @@ footer .information .familysite select {
 
 @media screen and (max-width : 630px) {
 
+    
+    .main .header_bottom ul .logo img {
+        width: 90px;
+    }
 
+    .main .header_bottom ul .ham img {
+        height: 30px;
+    }
+    
+    .main .product_list .product{
+        margin: auto;
+        margin-bottom: 180px;
+    }
 
     .main_b .header_bottom ul .logo img {
         width: 90px;
@@ -588,7 +580,9 @@ footer .information .familysite select {
 
 @media screen and (max-width : 400px) {
     /* 모바일 */
-
+    .slider-item p{
+        font-size: 0.7rem;
+    }
 
 }
 

@@ -82,6 +82,7 @@ header .header_top ul li:first-child {
     position: relative;
     top: 0;
     margin-bottom: 250px;
+    color: #fff;
 }
 
 .main .video {
@@ -964,6 +965,7 @@ footer .information .familysite select {
 
 }
 
+
 @media screen and (max-width : 991px) {
 
     /* 태블릿 */
@@ -1050,6 +1052,7 @@ footer .information .familysite select {
     .main #brand {
         padding: 0 24px;
     }
+    
 
     #brand .brand_title {
         text-align: center;
@@ -1062,10 +1065,12 @@ footer .information .familysite select {
     #brand .brand_title .brand_title_2 {
         font-size: 1.3em;
     }
+    
 
     #brand .brand_slide {
         display: flex;
         flex-direction: column;
+        max-height: inherit;
     }
 
     #brand .brand_slide .fix {
@@ -1073,6 +1078,10 @@ footer .information .familysite select {
         max-width: 100%;
         max-height: 500px;
     }
+
+    /* #brand .brand_slide .fix_i img {
+        max-width: 100%; */
+    
 
     #brand .brand_slide .scroll {
         display: flex;
@@ -1089,11 +1098,16 @@ footer .information .familysite select {
 
     #brand .brand_slide .scroll .content {
         flex-shrink: 0;
-        max-width: fit-content;
+        width: fit-content;
         height: fit-content;
         margin-right: 60px;
         margin-top: 24px;
         margin-bottom: 24px;
+    }
+
+    #brand .brand_slide .scroll .content h2{
+        font-size: 1.1rem;
+
     }
 
     #brand .brand_slide .scroll .content p{
@@ -1186,8 +1200,9 @@ footer .information .familysite select {
     footer .information .familysite select {
         display: none;
     }
-
 }
+
+
 
 @media screen and (max-width : 767px) {
     /* 작은 태블릿 */
@@ -1482,5 +1497,8 @@ footer .information .familysite select {
 }
 
 @media screen and (max-height : 400px) {
+    .main .video video{
+        width: 100%;
+    }
     /* 모바일 가로 버전 */
 }

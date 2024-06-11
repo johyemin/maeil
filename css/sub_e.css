@@ -71,7 +71,7 @@ header .header_top ul li:first-child{
 
 .main_banner{
     width: 100%;
-    max-height: 700px;
+    height: 700px;
     margin-bottom: 100px;
 }
 
@@ -86,6 +86,12 @@ header .header_top ul li:first-child{
     position: relative;
     top: -95px;
 
+}
+
+.main_banner .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main_banner  .header_bottom{
@@ -447,6 +453,10 @@ footer .information .familysite select{
 
 @media screen and (max-width : 1280px) {
     /* 노트북 */
+    .main .rule .r_contents br:first-child{
+        display: none;
+    }
+    
     .main .company_circle .left{
         width: 400px;
         height: 400px;
@@ -620,8 +630,11 @@ footer .information .familysite select{
         display: flex;
         flex-direction: column;
     }
+    
 
     .main .company_circle .left{
+        width: 400px;
+        height: 400px;
         position: static;
     }
 
@@ -629,13 +642,22 @@ footer .information .familysite select{
         top: 18%;
     }
 
+    .main .company_circle .center{
+        width: 400px;
+        height: 400px;
+        position: static;
+    }
+
     .main .company_circle .right{
+        width: 400px;
+        height: 400px;
         position: static;
     }
 
     .main .company_circle .right .right_contents{
         top: 85%;
     }
+    
 
     .main .ethics {
         padding: 0 16px;
@@ -690,8 +712,15 @@ footer .information .familysite select{
 
 @media screen and (max-width : 767px) {
     /* 작은 태블릿 */
+    .main .rule .r_contents br:first-child{
+        display: block;
+    }
     .main .company_circle{
         margin-bottom: 200px;
+    }
+
+    .main .back_circle .top_circle{
+        top: 50%;
     }
 
     .main .back_circle .top_circle img{
@@ -728,14 +757,12 @@ footer .information .familysite select{
 
 @media screen and (max-width : 630px) {
 
-
-
-    .main_banner .header_bottom ul .logo img{
+    .main_banner .header_bottom ul .logo img {
         width: 90px;
     }
 
-    .main_banner .header_bottom ul .ham img{
-        height: 35px;
+    .main_banner .header_bottom ul .ham img {
+        height: 30px;
     }
 
 
@@ -758,6 +785,24 @@ footer .information .familysite select{
     .main_banner {
         position: relative;
         top: -25px;
+    }
+
+    .main .company_circle .left{
+        width: 350px;
+        height: 350px;
+        position: static;
+    }
+
+    .main .company_circle .center{
+        width: 350px;
+        height: 350px;
+        position: static;
+    }
+
+    .main .company_circle .right{
+        width: 350px;
+        height: 350px;
+        position: static;
     }
 
     .main .ethics .e_title {
