@@ -749,7 +749,7 @@ footer .information .familysite select{
     .main .rule{
         margin-bottom: 200px;
     }
-    
+
     .top {
         right: 16px;
     }
@@ -870,6 +870,15 @@ footer .information .familysite select{
     }
     .main .ethics .e_contents p {
         font-size: 0.8rem;
+    }
+
+    
+    .information .info .info_mid {
+        flex-direction: column;
+    }
+
+    .information .info .info_mid .address {
+        margin-bottom: 30px;
     }
 
 }

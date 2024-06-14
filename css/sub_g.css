@@ -652,6 +652,15 @@ footer .information .familysite select{
         gap: 10px;
     }
 
+    
+    .information .info .info_mid {
+        flex-direction: column;
+    }
+
+    .information .info .info_mid .address {
+        margin-bottom: 30px;
+    }
+
 }
 
 @media screen and (max-height : 400px) {

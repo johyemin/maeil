@@ -154,12 +154,12 @@ header .header_top ul li:first-child {
 
 .slider {
     width: 50%;
-    height: 200px;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.slider-inner {
+/* .slider-inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -170,7 +170,7 @@ header .header_top ul li:first-child {
     pointer-events: none;
     align-items: center;
     gap: 28px;
-}
+} */
 
 .slider-item {
     text-align: center;
@@ -180,13 +180,15 @@ header .header_top ul li:first-child {
     height: 100%;
     background-color: var(--maincolor--);
     height: 40px;
+}
+
+.slider-item .item_i{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.slider-item p{
+.slider-item .item_i p{
     color: #fff;
     font-family: var(--fontBold--);    
 }
@@ -227,6 +229,10 @@ header .header_top ul li:first-child {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+}
+
+.main .product_list .product .p_C{
+    line-height: 150%;
 }
 
 .main .product_list .product .p_T h3 {
@@ -372,9 +378,10 @@ footer .information .familysite select {
 
 @media screen and (max-width : 1440px) {
     .main .product_list {
-        max-width: 1200px;
+        max-width: 1240px;
         display: flex;
         justify-content: space-evenly;
+        padding: 0 20px;
     }
 
     .main .product_list .p4 {
@@ -440,15 +447,8 @@ footer .information .familysite select {
         width: 80%;
     }
     
-    .slider-inner{
-        gap: 14px;
-    }
 }
 
-@media screen and (max-width: 1000px ) {
-
-    
-}
 
 @media screen and (max-width : 991px) {
 
@@ -586,6 +586,15 @@ footer .information .familysite select {
     /* 모바일 */
     .slider-item p{
         font-size: 0.7rem;
+    }
+
+    
+    .information .info .info_mid {
+        flex-direction: column;
+    }
+
+    .information .info .info_mid .address {
+        margin-bottom: 30px;
     }
 
 }
