@@ -183,6 +183,7 @@ header .header_top ul li:first-child {
 }
 
 .slider-item .item_i{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,6 +391,12 @@ footer .information .familysite select {
 
 }
 
+@media screen and (max-width : 1280px) {
+    /* 노트북 */
+
+
+}
+
 
 @media screen and (max-width : 1200px) {
     /* 노트북 큰 태블릿 */
@@ -438,6 +445,10 @@ footer .information .familysite select {
 }
 
 @media screen and (max-width : 1024px) {
+
+    .main .product_btn .btn_category .category_title{
+        margin-bottom: 28px;
+    }
     .main .product_btn .btn_category{
         display: flex;
         flex-direction: column;
