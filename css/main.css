@@ -401,6 +401,8 @@ header .header_top ul li:first-child {
     max-height: 772px;
     overflow: hidden;
     display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
 }
 
 #brand .brand_slide .fix {
@@ -418,26 +420,26 @@ header .header_top ul li:first-child {
     /* margin-right: 28PX; */
 }
 
-#brand .brand_slide .fix_i img{
+#brand .brand_slide .fix_i img {
     max-width: unset;
 }
 
 #brand .brand_slide .scroll {
-    width: 20%;
+    width: 100%;
     overflow-y: scroll;
     position: sticky;
 }
 
 .scroll::-webkit-scrollbar {
-    width:0px;
-  }
+    width: 0px;
+}
 
-  .content {
+.content {
     width: 100%;
     height: 20vh;
     margin-bottom: 50px;
     position: sticky;
-  }
+}
 
 #brand .brand_slide .slider img {
     max-width: none;
@@ -618,6 +620,40 @@ header .header_top ul li:first-child {
     transform: translate(-80%, -45%);
 }
 
+.c {
+    -webkit-animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+
 footer {
     position: relative;
     width: 100%;
@@ -751,14 +787,14 @@ footer .information .familysite select {
 }
 
 @media screen and (max-width : 1400px) {
-    .coreValue .core_contents_nanum .nanum{
+    .coreValue .core_contents_nanum .nanum {
         height: fit-content;
     }
 
     #brand .scroll .content {
         margin-bottom: 90px;
     }
-    
+
 }
 
 @media screen and (max-width : 1280px) {
@@ -795,7 +831,7 @@ footer .information .familysite select {
 
     .main .coreValue .core_contents_nanum .nanum .nanum_textbox {
         margin: 0;
-        padding: 30px;
+        padding: 24px;
     }
 
     .main .coreValue .core_contents_nanum .nanum .nanum_textbox .nanum_title p {
@@ -841,7 +877,7 @@ footer .information .familysite select {
 
 @media screen and (max-width : 1220px) {
 
-    
+
     .coreValue .child_pain .child_pain_textbox .child_pain_title p {
         font-size: 1.8em;
     }
@@ -855,7 +891,7 @@ footer .information .familysite select {
         height: 20vh;
         margin-bottom: 80px;
         position: sticky;
-      }
+    }
 }
 
 @media screen and (max-width : 1200px) {
@@ -925,8 +961,16 @@ footer .information .familysite select {
         font-size: 1.7rem;
     }
 
+    .m_Mind .swiper .swiper-wrapper .swiper-slide .mind_contents .mind_contents_text p {
+        margin: 0 29px
+    }
+
     .coreValue .core_contents_nanum .nanum .nanum_textbox .nanum_text p {
         font-size: 1.2rem;
+    }
+
+    .coreValue .core_contents_nanum .nanum .nanum_textbox .nanum_text p br {
+        display: none;
     }
 
     .main #brand {
@@ -954,6 +998,34 @@ footer .information .familysite select {
 
     .global .global_img_main .global_img_circle .aisa {
         max-width: 85px;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+    header .header_top ul li:first-child {
+        margin: 0;
+        padding: 0 24px;
+    }
+
+    .m_Mind .swiper .swiper-wrapper .swiper-slide .mind_contents {
+        height: 300px;
+    }
+
+    .m_Mind .swiper .swiper-wrapper .swiper-slide .mind_contents .mind_contents_text {
+        padding: 8px 0;
+    }
+
+    .m_Mind .swiper .swiper-wrapper .swiper-slide .mind_contents .mind_contents_text {
+        padding: 16px 0;
+    }
+
+    .product .product_t {
+        max-width: 100%;
+    }
+
+    .product .product_b {
+        max-width: 100%;
     }
 
 }
@@ -1023,6 +1095,10 @@ footer .information .familysite select {
         font-size: 1.5em;
     }
 
+    .coreValue .core_contents_nanum .nanum .nanum_textbox .nanum_text p br {
+        display: none;
+    }
+
     .coreValue .core_contents_nanum .nanum_cow {
         grid-column: 1/3;
         grid-row: 2/3;
@@ -1052,7 +1128,7 @@ footer .information .familysite select {
     .main #brand {
         padding: 0 24px;
     }
-    
+
 
     #brand .brand_title {
         text-align: center;
@@ -1065,7 +1141,7 @@ footer .information .familysite select {
     #brand .brand_title .brand_title_2 {
         font-size: 1.3em;
     }
-    
+
 
     #brand .brand_slide {
         display: flex;
@@ -1081,7 +1157,7 @@ footer .information .familysite select {
 
     /* #brand .brand_slide .fix_i img {
         max-width: 100%; */
-    
+
 
     #brand .brand_slide .scroll {
         display: flex;
@@ -1092,7 +1168,7 @@ footer .information .familysite select {
         flex-wrap: wrap;
     }
 
-    #brand .brand_slide .scroll .content br{
+    #brand .brand_slide .scroll .content br {
         display: none;
     }
 
@@ -1105,12 +1181,12 @@ footer .information .familysite select {
         margin-bottom: 24px;
     }
 
-    #brand .brand_slide .scroll .content h2{
+    #brand .brand_slide .scroll .content h2 {
         font-size: 1.1rem;
 
     }
 
-    #brand .brand_slide .scroll .content p{
+    #brand .brand_slide .scroll .content p {
         display: none;
     }
 
@@ -1298,6 +1374,16 @@ footer .information .familysite select {
         flex-direction: column;
     }
 
+    .product .product_t .icecream,
+    .product .product_t .cake {
+        margin: auto;
+    }
+
+    .product .product_b .amazing,
+    .product .product_b .yogurt {
+        margin: auto;
+    }
+
     .submenu .sub_title a img {
         width: 90px;
     }
@@ -1406,7 +1492,7 @@ footer .information .familysite select {
         margin: auto;
     }
 
-    .product .product_b .amazing{
+    .product .product_b .amazing {
         margin: auto;
     }
 
@@ -1497,8 +1583,9 @@ footer .information .familysite select {
 }
 
 @media screen and (max-height : 400px) {
-    .main .video video{
+    .main .video video {
         width: 100%;
     }
+
     /* 모바일 가로 버전 */
 }
